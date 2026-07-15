@@ -2,7 +2,7 @@ name: 01-github-action
 on: push
 jobs:
   first-job:
-    runs-on: ubunutu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: welcome
         run: echo "this is welcome"
@@ -14,3 +14,11 @@ jobs:
         run: |
           echo "hello world"
           echo "testing...."
+
+  third-job:
+    runs-on: windows-latest
+    steps:
+      - name: windows-step
+        shell: bash
+        run: |
+          echo "this is windows shell..."
