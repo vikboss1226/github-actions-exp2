@@ -1,0 +1,16 @@
+name: 01-github-action
+on: push
+jobs:
+  first-job:
+    runs-on: ubunutu-latest
+    steps:
+      - name: welcome
+        run: echo "this is welcome"
+
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: second-step
+        run: |
+          echo "hello world"
+          echo "testing...."
