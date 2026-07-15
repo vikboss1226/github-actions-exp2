@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - main
-
+      - release/*
   pull_request:
     branches:
       - main
     types:
       - opened
       - synchronize
+      - closed
 
 jobs:
   event-demo:
@@ -22,4 +23,5 @@ jobs:
           echo "GitHub Actions Event Filter Demo"
           echo "Event Name: ${{ github.event_name }}"
           echo "Branch: ${{ github.ref }}"
+          echo "Merge Type: ${{github.action_status}}"
           echo "Workflow executed successfully!"
