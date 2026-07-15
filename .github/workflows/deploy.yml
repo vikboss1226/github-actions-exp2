@@ -8,6 +8,7 @@ jobs:
         run: echo "this is welcome"
 
   second-job:
+    needs: first-job
     runs-on: ubuntu-latest
     steps:
       - name: second-step
